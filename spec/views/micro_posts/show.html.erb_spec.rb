@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe "microposts/show" do
+describe "micro_posts/show" do
   before(:each) do
-    @micropost = assign(:micropost, stub_model(Micropost,
+    @micro_post = assign(:micro_post, stub_model(MicroPost,
       :user_id => 1,
       :content => "Content"
     ))

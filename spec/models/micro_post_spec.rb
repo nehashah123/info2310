@@ -1,9 +1,9 @@
 require 'spec_helper'
  
-describe Micropost do
+describe MicroPost do
  
   before do
-    @micro_post = Micropost.new(user_id: 1, 
+    @micro_post = MicroPost.new(user_id: 1, 
                                 content: "hello world")
   end
  

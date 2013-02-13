@@ -1,20 +1,20 @@
 require 'spec_helper'
 
-describe "microposts/index" do
+describe "micro_posts/index" do
   before(:each) do
-    assign(:microposts, [
-      stub_model(Micropost,
+    assign(:micro_posts, [
+      stub_model(MicroPost,
         :user_id => 1,
         :content => "Content"
       ),
-      stub_model(Micropost,
+      stub_model(MicroPost,
         :user_id => 1,
         :content => "Content"
       )
     ])
   end
 
-  it "renders a list of microposts" do
+  it "renders a list of micro_posts" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => 1.to_s, :count => 2
