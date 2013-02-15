@@ -25,7 +25,15 @@ class User < ActiveRecord::Base
     Digest::SHA256.hexdigest("--#{salt}--#{raw_password}--")
   end
   
+  # If there is a user in the database with the given email, and 
+# the password matches theirs, returns the user.
+# Otherwise, returns nil
   def self.authenticate(email, plain_text_password)
-    nil
+  	user=User.find_by_email(email)
+    if user && user.hashed_password==user.encrypt(plain_text_password)
+			return user
+		else 
+			return nil
+		end
   end
 end

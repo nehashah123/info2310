@@ -24,7 +24,7 @@ describe UsersController do
   # User. As you add validations to User, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "name" => "MyString", "email" => "neha@gmail.com" }
+    { "name" => "MyString", "email" => "neha@gmail.com", "password" => "passkey" }
   end
 
   # This should return the minimal set of values that should be in the session
