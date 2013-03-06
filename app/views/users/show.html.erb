@@ -13,8 +13,8 @@
 <p>
   <%= pluralize(@user.micro_posts.length, "MicroPost") %>
 </p>
-
-<%= render @user.micro_posts %>
-
+<%=will_paginate @microposts%>
+<%= render @microposts %>
+<%=will_paginate @microposts%>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

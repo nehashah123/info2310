@@ -36,4 +36,8 @@ class User < ActiveRecord::Base
 			return nil
 		end
   end
+  
+  def feed(paginate_options={page: 1})
+  micro_posts.paginate(paginate_options)
+  end
 end
