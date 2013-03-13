@@ -2,6 +2,7 @@ Info2310::Application.routes.draw do
   resources :micro_posts
 
 resources :sessions, only: [:new, :create, :destroy]
+resources :relationships, only: [:create, :destroy]
   resources :users
 
 
