@@ -42,7 +42,11 @@ class User < ActiveRecord::Base
   
   def feed(paginate_options={page: 1})
   followed_user_ids=followed_users.map{ |u| u.id }
+<<<<<<< HEAD
   MicroPost.where('user_id in (?) or user_id = ?', followed_user_ids, id).order('created_at desc').paginate(paginate_options)
+=======
+  MicroPost.where('user_id in (?) or user_id = ?', followed_users_id, id).order('created_at desc').paginate(paginate_options)
+>>>>>>> following
   end
   
   # Returns the Relationship object this user has with other_user
